@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+         
+    footer.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer.main > div {
+  flex-basis: 25%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 35%;
+  list-style: none;
+  padding: 10px;
+}
+
+
+.Navigation  li {
+    list-style: none;
+    
+}
+#search-button span{
+    width: 5%;
+    height: 1px;
+    background-color: #3c1fe3;
+}
+#search-button {
+    font-size: 150%;
+    
+    
+}
+
+
+/* Add additional styles as needed */
+
+    </style>
+</head>
+<body>
+    <footer class="main">
+        <div>
+            <h2>One Card</h2>
+            <nav>
+                <p>Insia's best metal credit card. Built with full-
+                stack tech. Baked by the principles of simplicity, transparency, and giving back control to the user.</p>
+            </nav>
+        </div>
+
+        <div >
+            <h2>Navigation</h2>
+            <nav class="Navigation">
+                <li><a href="#"></a>Home</li>
+                <li><a href="#"></a>About Us</li>
+                <li><a href="#"></a>Careers</li>
+                <li><a href="#"></a>Offers</li>
+                
+            </nav>
+        </div>
+
+        <div>
+            <h2>Support</h2>
+            <nav>
+                <li><a href=""></a>F.A.Q</li>
+                <li><a href=""></a>Cookies Policy</li>
+                <li><a href=""></a>Terms Of Service</li>
+                <li><a href=""></a>Support</li>
+            </nav>
+        </div>
+
+        <div>
+            <h2>Newsletter</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Your email id here...">
+              </div>
+
+              <div>
+                <button id="search-button"><span>Suscribe</span></button>
+              </div>
+        </div>
+    </footer>
+</body>
+</html>
