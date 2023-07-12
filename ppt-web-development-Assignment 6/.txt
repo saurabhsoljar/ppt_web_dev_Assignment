@@ -1,0 +1,86 @@
+Q.1 What’s Constructor And Its Purpose?
+Constructors, which concretely use a single class to create objects and return a new instance of the class, are abstracted by factories, which also create objects but can do so in various ways, using multiple classes or different allocation schemes such as an object pool.
+
+
+Q.2 Explain This Keyword and Its Purpose?
+“This” keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, “this” references the global object
+
+
+Q.3 What’s Call Apply Bind Method & Difference Between them
+All three of the call, bind, and apply methods set the this argument to the function.
+
+The call and apply methods set this to a function and call the function.
+The bind method will only set this to a function. We will need to separately invoke the function.
+
+call
+The call method binds the this value to the function and executes the function. It takes the this value and a list of arguments as parameters. Then, it returns the value returned by the function, which is called using the call method.
+
+function test(arg1, arg2){
+  console.log(this.num, arg1, arg2); // 100, 10, 20
+}
+
+test.call({num: 100}, 10, 20);
+
+In the code above, we have called the test function using the call method. The call method will invoke the test function with the this value as the object passed to the call method.
+
+apply
+
+The apply method binds the this value to the function and executes the function. It takes the this value and a single array object as parameters, and it returns the value returned by the function, which is called using the apply method.
+
+function test(...arguments){
+  console.log(this.num, arguments);//100, [1,2,3]
+}
+
+test.apply({num: 100}, [1,2,3]); 
+
+bind
+
+The bind method binds the this value to the function and returns a new function. However, we still need to separately invoke the returned function.
+
+function test(arg){
+ console.log(this.number, arg);
+}
+
+let bindedFn = test.bind({number: 99}, "argument");
+
+bindedFn(); // 99, "argument"
+
+Summary
+call: binds the this value, invokes the function, and allows you to pass a list of arguments.
+
+apply: binds the this value, invokes the function, and allows you to pass arguments as an array.
+
+bind: binds the this value, returns a new function, and allows you to pass in a list of arguments.
+
+
+Q.4 Explain OOPS ? 
+Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.
+
+a programming concept that works on the principles of abstraction, encapsulation, inheritance, and polymorphism.
+
+
+Q.5 Whats Abstraction and Its Purpose?
+Abstraction is used to hide background details or any unnecessary implementation about the data so that users only see the required information. It is one of the most important and essential features of object-oriented programming. Pre-defined functions are similar to data abstraction.
+
+
+Q.6 Whats Polymorphism and Purpose of it?
+Polymorphism is a feature of object-oriented programming languages that allows a specific routine to use variables of different types at different times. Polymorphism in programming gives a program the ability to redefine methods for derived classes.
+
+
+Q.7  Whats Inheritance and Purpose of it?
+Inheritance in Java is the method to create a hierarchy between classes by inheriting from other classes. Java Inheritance is transitive - so if Sedan extends Car and Car extends Vehicle, then Sedan is also inherited from the Vehicle class. The Vehicle becomes the superclass of both Car and Sedan.
+
+
+Q.8 Whats Encapsulation and Purpose of it ?
+Encapsulation is a way to restrict the direct access to some components of an object, so users cannot access state values for all of the variables of a particular object. Encapsulation can be used to hide both data members and data functions or methods associated with an instantiated class or object.
+
+
+
+Q.9 Explain Class in JavaScript?
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are unique to classes.
+
+
+Q.10 What’s Super Keyword & What it does?
+The super keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor. The super. prop and super[expr] expressions are valid in any method definition in both classes and object literals.
+
+The super keyword refers to superclass (parent) objects. It is used to call superclass methods, and to access the superclass constructor
