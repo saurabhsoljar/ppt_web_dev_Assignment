@@ -1,0 +1,278 @@
+Q.1 Explain Hoisting in JavaScript
+In JavaScript, Hoisting is a kind of default behavior in which all the declarations either variable declaration or function declaration are moved at the top of the scope just before executing the program's code. However, it can be considered an advantage because all functions and variable declarations are placed to the top of their scope no matter where they are all declared anywhere in the whole program, even regardless of whether they are declared global or local.
+
+Due to the concept of hoisting in JavaScript, we can call a function even before we define the function definition in our program's code.
+
+In simple words, we can say that we can use the variables and functions in JavaScript before declaring them because as we discussed above JavaScript compiler moves the declarations of all the variables and functions at the top of their scope so that there will not be an error of any kind. The concept of JavaScript of moving all declarations of the variables and functions to the top of their scope by compiler itself just before the execution of code is known as Hoisting.
+
+Let us understand what precisely this is:
+
+This is the following sequence mostly in which variable declaration and initialization occur.
+
+1. Declaration -> 2.Initialisation/Assignment ->3. Usage
+
+
+
+Q.2 Explain Temporal Dead Zone?
+A temporal dead zone (TDZ) is the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
+
+A block is a pair of braces ({...}) used to group multiple statements.
+Initialization occurs when you assign an initial value to a variable.
+Suppose you attempt to access a variable before its complete initialization. In such a case, JavaScript will throw a ReferenceError.
+
+So, to prevent JavaScript from throwing such an error, you’ve got to remember to access your variables from outside the temporal dead zone.
+
+But where exactly does the TDZ begin and end? Let’s find out below.
+
+
+
+Q.3 Difference between var & let?
+
+var keyword
+The var statement is used to declare a variable in JavaScript. A variable declared with the var keyword is defined throughout the program.
+
+Example
+var greeter = "hey hi";  
+var times = 5;  
+if (times > 3) {  
+   var greeter = "Say Hello JavaTpoint";   
+}  
+console.log(greeter) //Output: Say Hello JavaTpoint  
+
+
+let keyword
+The let statement is used to declare a local variable in TypeScript. It is similar to the var keyword, but it has some restriction in scoping in comparison of the var keyword. The let keyword can enhance our code readability and decreases the chance of programming error. A variable declared with the let keyword is limited to the block-scoped only.
+
+Example
+let greeter = "hey hi";  
+let times = 5;  
+if (times > 3) {  
+   let hello = "Say Hello JavaTpoint";   
+   console.log(hello) // Output: Say Hello JavaTpoint  
+}  
+console.log(hello) // Compile error: greeter is not defined  
+
+
+Q.4 What are the major features introduced in ECMAScript 6?
+ES6 or the ECMAScript 2015 is the 6th and major edition of the ECMAScript language specification standard. It defines the standard for the implementation of JavaScript and it has become much more popular than the previous edition ES5.
+
+ES6 comes with significant changes to the JavaScript language. It brought several new features like, let and const keyword, rest and spread operators, template literals, classes, modules and many other enhancements to make JavaScript programming easier and more fun. In this article, we will discuss some of the best and most popular ES6 features that we can use in your everyday JavaScript coding.
+
+1.let and const Keywords
+2.Arrow Functions
+3.Multi-line Strings
+4.Default Parameters
+5.Template Literals
+6.Destructuring Assignment
+7.Enhanced Object Literals
+8.Promises
+9.Classes
+10.Modules
+
+
+
+Q.5 What is the difference between let and const ?
+
+JavaScript let
+
+Cannot be redeclared
+Can be reassigned a value
+Can have a block scope
+Variables must be initialized before use
+Can be redeclared inside a block
+
+JavaScript const
+
+Cannot be redeclared
+Cannot reassign the value
+Can have a block scope
+Variables must be initialized before use
+Can never be redeclared
+
+
+
+Q.6  What is template literals in ES6 and how do you use them?
+Template literals are a new feature introduced in ECMAScript 2015/ ES6. It provides an easy way to create multiline strings and perform string interpolation. Template literals are the string literals and allow embedded expressions. Before ES6, template literals were called as template strings.
+
+
+
+Q.7 What’s difference between map & forEach?
+
+The map() Method
+The map() method is used to loop through each element of an array or object. The map() method takes a callback function as an argument. The callback function is invoked for each element of the array or object.
+
+The map() method is similar to the forEach() method, but it returns a new array.
+
+Example
+Below is the full working code with an explanation -
+
+<!doctype html>
+<html>
+<head>
+   <title>Examples</title>
+</head>
+<body>
+   <div id="result"></div>
+   <script>
+      var arr = [1,2,3,4,5];
+      arr.map(function(element){
+         var item2 = document.createElement('div');
+         item2.innerText = element;
+         document.getElementById("result").appendChild(item2);
+      });
+   </script>
+</body>
+</html>
+
+In the above code, we have defined an array named “arr”. The map() method is called on the “arr” array. The map() method takes a callback function as an argument. The callback function is invoked for each element of the “arr” array. The return value of the callback function is stored in a new array named “newArr”.
+
+
+The forEach() Method
+
+The forEach() method is used to loop through each element of an array or object. The forEach() method takes a callback function as an argument. The callback function is invoked for each element of the array or object.
+
+The forEach() method is similar to the for loop, but it does not have a return value.
+
+Example
+Below is the full working code with an explanation −
+<!doctype html>
+<html>
+<head>
+   <title>Examples</title>
+</head>
+<body>
+   <div id="result"></div>
+   <script>
+      var arr = [1,2,3,4,5];
+      arr.forEach(function(element){
+         var item2 = document.createElement('div');
+         item2.innerText = element;
+         document.getElementById("result").appendChild(item2);
+      });
+   </script>
+</body>
+</html>
+
+In the above code, we have defined an array named “arr”. The forEach() method is called on the “arr” array. The forEach() method takes a callback function as an argument. The callback function is invoked for each element of the “arr” array.
+
+map() vs forEach()
+
+Some of the difference between map() and forEach() methods are listed below −
+
+The map() method returns a new array, whereas the forEach() method does not return a new array.
+
+The map() method is used to transform the elements of an array, whereas the forEach() method is used to loop through the elements of an array.
+
+The map() method can be used with other array methods, such as the filter() method, whereas the forEach() method cannot be used with other array methods.
+
+Conclusion
+In conclusion, the forEach() and map() methods are both used to loop through arrays and objects. The forEach() method does not return a new array, whereas the map() method returns a new array. The map() method is used to transform the elements of an array, whereas the forEach() method is used to loop through the elements of an array.
+
+
+
+Q.8 How can you destructure objects and arrays in ES6?
+
+Object
+
+Let's consider the following object for all the samples:
+
+const person = {
+  firstName: "Nick",
+  lastName: "Anderson",
+  age: 35,
+  sex: "M"
+}
+
+Without destructuring
+const person = {
+  firstName: "Nick",
+  lastName: "Anderson",
+  age: 35,
+  sex: "M"
+}
+
+const first = person.firstName;
+const age = person.age;
+const city = person.city || "Paris";
+
+console.log(first) // "Nick"
+console.log(age) // 35
+console.log(city) // "Paris" because person.city is undefined
+
+With destructuring, all in one line:
+const person = {
+  firstName: "Nick",
+  lastName: "Anderson",
+  age: 35,
+  sex: "M"
+}
+
+const { firstName: first, age, city = "Paris" } = person; // That's it !
+
+console.log(age) // 35 -- A new variable age is created and is equal to person.age
+console.log(first) // "Nick" -- A new variable first is created and is equal to person.firstName
+console.log(firstName) // Undefined -- person.firstName exists BUT the new variable created is named first
+console.log(city) // "Paris" -- A new variable city is created and since person.city is undefined, city is equal to the default value provided "Paris".
+
+
+Array
+
+Lets consider the following array:
+
+const myArray = ["a", "b", "c"];
+
+Without destructuring
+
+const myArray = ["a", "b", "c"];
+
+const x = myArray[0];
+const y = myArray[1];
+console.log(x, y); // "a" "b"
+
+With destructuring
+const myArray = ["a", "b", "c"];
+
+const [x, y] = myArray; // That's it !
+
+console.log(x) // "a"
+console.log(y) // "b"
+
+
+
+Q.9 How can you define default parameter values in ES6 functions?
+
+Function parameters with default values are initialized with default values if they contain no value or are undefined. JavaScript function parameters are defined as undefined by default. However, it may be useful to set a different default value.
+
+
+Q.10 What is the purpose of the spread operator (...) in ES6?
+Spread Operator is a very simple and powerful feature introduced in the ES6 standard of JavaScript, which helps us to write nicer and shorter code. The JavaScript spread operator is denoted by three dots (…). The spread operator helps the iterable objects to expand into individual elements. Iterable objects are those on which we can use a loop, for example, Array, Map, Set, etc. In other words, the spread operator allows us to copy all elements from the existing array or object into another array or object.
+
+Let us now visit the following section which will help us to understand the need for the Spread Operator in ES6:
+
+Why there is a need for a spread operator?
+
+An object creates a memory in a heap because the value is defined in a heap so if we copy the original object into the temporary object and do some changes then it will also reflect in the original object the same reason for the array as Array is also behaving as the object.
+
+But the spread operator does not make changes in the original array it also does operations in the spread operator.
+
+Syntax:
+
+var variablename1 = [...value];
+Let’s understand the usage of the spread operator through the following illustrated examples:
+
+const cars1 = ["AUDI", "BMW", "TATA", "MERCEDES"];
+// Copied elements from cars1 to cars2 here
+const cars2 = [...cars1];
+ 
+// Copied elements from cars1 to cars3 here
+// and also add some new elements in cars3
+const cars3 = [...cars1, "NISSAN", "TOYOTA"];
+ 
+console.log(cars1);
+console.log(cars2);
+console.log(cars3);
+
+Output
+[ 'AUDI', 'BMW', 'TATA', 'MERCEDES' ]
+[ 'AUDI', 'BMW', 'TATA', 'MERCEDES' ]
+[ 'AUDI', 'BMW', 'TATA', 'MERCEDES', 'NISSAN', 'TOYOTA' ]
