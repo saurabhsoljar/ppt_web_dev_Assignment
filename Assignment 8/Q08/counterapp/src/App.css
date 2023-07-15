@@ -1,0 +1,44 @@
+
+.app-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background:#fbd6db ;
+}
+.content-container{
+  display: flex;
+  margin-top: 125px;
+  height: 50vh;
+  width: 350px;
+  border-radius:19px;
+  background-color: #fe1e4b;
+  flex-direction: column;
+  text-align: center;
+}
+.counter{
+  font-size: 45px;
+  font-weight:600;
+  margin-top: 60px;
+  color: #ffffff;
+}
+.increase-button{
+  border-width: 0;
+  color: #000000;
+  height: 45px;
+  width: 90px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #ffffff;
+}
+.decrease-button{
+  border-width: 0;
+  color: #000000;
+  height: 45px;
+  width: 90px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #ffffff;
+}

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: #4f18a1;
+    font-size: 100px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 210px;
+    color: #201e1e;
+    letter-spacing: 18px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
+
+.container {
+    display: flex;
+    background-color: #6b42f2;
+    padding: 60px;
+    font-size: 28px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.time-section {
+    margin: 0 15px;
+}
+
+#unit {
+    font-size: 20px;
+    font-weight: 500;
+}
+
